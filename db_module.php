@@ -5,7 +5,7 @@ function taoKetNoi(&$link)
 {
 	$link = mysqli_connect(HOST, USER, PASSWORD, DB);
 	if (mysqli_connect_errno()) {
-		echo "Lỗi kết nối đến máy chủ: " . mysqli_connect_error();
+		echo "❌ Lỗi kết nối đến máy chủ: " . mysqli_connect_error();
 		exit();
 	}
 }
@@ -13,21 +13,30 @@ function taoKetNoi(&$link)
 function chayTruyVanTraVeDL($link, $q)
 {
 	$result = mysqli_query($link, $q);
+	if (!$result) {
+		echo "❌ Lỗi truy vấn dữ liệu: " . mysqli_error($link);
+		return false;
+	}
 	return $result;
 }
 
 function chayTruyVanKhongTraVeDL($link, $q)
 {
 	$result = mysqli_query($link, $q);
-	return $result;
+	if (!$result) {
+		echo "❌ Lỗi thực thi truy vấn: " . mysqli_error($link);
+		return false;
+	}
+	return true;
 }
 
-function giaiPhongBoNho($link, $result)
+function giaiPhongBoNho($link, $result = null)
 {
-	try {
-		mysqli_close($link);
+	if ($result && is_object($result)) {
 		mysqli_free_result($result);
-	} catch (TypeError $e) {
+	}
+	if ($link) {
+		mysqli_close($link);
 	}
 }
-
+?>
