@@ -16,12 +16,7 @@ $tieude="Chờ đợi sản phẩm đột phá!";
 
 taoKetNoi($link);
 
-// Câu truy vấn DELETE thứ 1
-/*
-$sql = "DELETE FROM tbl_binhluan
-        WHERE id_binhluan=$id_binhluan AND tieude='$tieude' AND noidung='$noidung' AND solike=$solike AND thoigian='$thoigian'
-        AND id_bantin=$id_bantin AND id_docgia=$id_docgia";
-*/
+
 //Câu truy vấn DELETE thứ 2
 $sql_delete="DELETE FROM tbl_binhluan
              WHERE id_binhluan=$id_binhluan AND tieude='$tieude'";
