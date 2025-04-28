@@ -2,9 +2,9 @@
 require_once "db_module.php";
 
 // Giá trị cố định
-$ten_danhmuc = "Lịch Sử";
-$hinhanh = "history.png";
-$id_nguoidung = 7;
+$ten_danhmuc = "Địa lý";
+$hinhanh = "geo.png";
+$id_nguoidung = 8;
 $thongbao = "";
 
 taoKetNoi($link);
