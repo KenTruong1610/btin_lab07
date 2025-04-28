@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "Nội dung: " . $row["noidung"] . "<br>";
     }
 } else {
-    echo "Không tìm thấy bình luận thoả mãn yêu cầu!";
+    echo "Không tìm thấy bình luận yêu cầu!";
 }
 
 giaiPhongBoNho($link, $result); // Giải phóng và đóng kết nối
