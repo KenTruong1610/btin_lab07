@@ -22,12 +22,12 @@ if ($row = mysqli_fetch_assoc($result)) {
          $id_bantin, 3)";
 
     if (chayTruyVanKhongTraVeDL($link, $sql_insert)) {
-        echo "✅ Thêm bình luận thành công!";
+        echo "Thêm bình luận thành công!";
     } else {
-        echo "❌ Lỗi khi thêm bình luận!";
+        echo " Lỗi khi thêm bình luận!";
     }
 } else {
-    echo "❌ Không tìm thấy bản tin với tiêu đề yêu cầu!";
+    echo " Không tìm thấy bản tin với tiêu đề yêu cầu!";
 }
 
 giaiPhongBoNho($link, $result);

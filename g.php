@@ -19,12 +19,12 @@ if ($row = mysqli_fetch_assoc($result)) {
     (36, $id_danhmuc, 'AI làm thay đổi cách chúng ta học tập', 'ai.jpg', 'Học sinh giờ dùng AI làm bài suốt', 'AI, học tập, công nghệ', 'Báo Công nghệ', 10, 7);";
 
     if (chayTruyVanKhongTraVeDL($link, $sql_insert)) {
-        echo "✅ Thêm bản tin thành công!";
+        echo "Thêm bản tin thành công!";
     } else {
-        echo "❌ Lỗi khi thêm bản tin!";
+        echo "Lỗi khi thêm bản tin!";
     }
 } else {
-    echo "❌ Không tìm thấy danh mục với tên yêu cầu!";
+    echo "Không tìm thấy danh mục với tên yêu cầu!";
 }
 
 // Giải phóng bộ nhớ
