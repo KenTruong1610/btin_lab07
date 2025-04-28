@@ -11,8 +11,8 @@ $id_bantin=27;
 $id_docgia=1;
 
 // Giá trị cố định của câu thứ 2
-$id_binhluan=51;
-$tieude="Chờ đợi sản phẩm đột phá!";
+$id_binhluan=61;
+$tieude="Bài viết hay quá!";
 
 // Giá trị cố định của câu thứ 3
 $id_nguoidung=7;
@@ -28,7 +28,7 @@ $sql_delete="DELETE FROM tbl_binhluan
 $sql_3="DELETE FROM tbl_danhmuc
         WHERE id_nguoidung=$id_nguoidung AND ten_danhmuc='$ten_danhmuc'";
 // Thực thi truy vấn
-if (chayTruyVanKhongTraVeDL($link, $sql_3)) {
+if (chayTruyVanKhongTraVeDL($link, $sql_delete)) {
     $thongbao = "Xóa bình luận '$tieude' thành công!";
 } else {
     $thongbao = "Xóa bình luận thất bại!";
