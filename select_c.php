@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "ID danh mục: " . $row["id_danhmuc"] . "<br>";
         echo "Tên danh mục: " . $row["ten_danhmuc"] . "<br>";
         echo "Tiêu đề: " . $row["tieude"] . "<br>";
-        echo "Hình ảnh: " . $row["b.hinhanh"] . "<br>";
+        echo "Hình ảnh: " . $row["hinhanh"] . "<br>";
         echo "Nội dung: " . $row["noidung"] . "<br>";
         echo "Từ khoá: " . $row["tukhoa"] . "<br>";
         echo "Nguồn tin: " . $row["nguontin"] . "<br>";
